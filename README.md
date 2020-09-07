@@ -2,6 +2,7 @@
 # Hare krishna
 # Radhe Radhe
 
+# Tutorial - https://docs.mongodb.com/manual/tutorial/
 # Drivers - https://docs.mongodb.com/drivers/
 
 # Working with MongoDB
@@ -45,4 +46,24 @@
                 .                         .                  .                         .                   .
     B->  CRUD Deep Dive - Create < -------.           The Aggregation framework  -------             MongoDB Stitch
     
-----------------------------------------------------------------------------------------------------------------------------    
+---------------------------------------------------------------------------------------------------------------------------- 
+# Database vs Collection - https://docs.mongodb.com/manual/core/databases-and-collections/
+
+# Create Database - https://www.tutorialspoint.com/mongodb/mongodb_create_database.htm
+
+# JSON vs BSON - https://www.mongodb.com/json-and-bson
+
+# CRUD Operations
+
+    Create                                                 Update
+    
+    insertOne(data,options)                     updateOne(filter, data, options)
+    insertmany(data,options)                    updateMany(filter, data, options)
+
+    Read                                                   Delete
+    
+    find(filter, options)                       deleteOne(filter, options)
+    findOne(filter, options)                    deleteMany(filter, options)
+    
+    
+

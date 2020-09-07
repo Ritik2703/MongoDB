@@ -1,0 +1,45 @@
+Create                                                 Update
+
+insertOne(data,options)                     updateOne(filter, data, options)
+insertmany(data,options)                    updateMany(filter, data, options)
+
+Read                                                   Delete
+
+find(filter, options)                       deleteOne(filter, options)
+findOne(filter, options)                    deleteMany(filter, options)
+
+ use flights
+ 
+ db.flightData.insertOne({departureAirport: "TXL", arrivalAirport: "LHR"})
+ 
+ db.flightData.insertOne({departureAirport: "TXL", arrivalAirport: "LHR", _id: "txl-lhr-1"})
+ 
+ db.flightData.find().pretty()
+ 
+ db.flightData.deleteOne({departureAirport: "TXL"})
+ 
+ db.flightData.deleteOne({_id: "txal-lhr-1"})
+ 
+ db.flightData.updateOne({distance: 10000}, {marker: "delete"})
+uncaught exception: Error: the update operation document must contain atomic operators :
+
+ db.flightData.updateOne({distance: 10000}, {$set: {marker: "delete"}})
+ 
+ db.flightData.updateMany({}, {$set: {marker: "todelete"}})
+ 
+ db.flightData.insertMany([
+...   {
+...     "departureAirport": "MUC",
+...     "arrivalAirport": "SFO",
+...     "aircraft": "Airbus A380",
+...     "distance": 12000,
+...     "intercontinental": true
+...   },
+...   {
+...     "departureAirport": "LHR",
+...     "arrivalAirport": "TXL",
+...     "aircraft": "Airbus A320",
+...     "distance": 950,
+...     "intercontinental": false
+...   }
+... ])

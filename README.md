@@ -3,6 +3,7 @@
 # Radhe Radhe
 
 # Tutorial - https://docs.mongodb.com/manual/tutorial/
+#            https://docs.mongodb.com/realm/mongodb/
 # Drivers - https://docs.mongodb.com/drivers/
 
 # Working with MongoDB
@@ -66,4 +67,15 @@
     findOne(filter, options)                    deleteMany(filter, options)
     
     
+# Document Schemas- https://docs.mongodb.com/realm/mongodb/document-schemas/
 
+# Data Types - https://docs.mongodb.com/manual/core/shell-types/ and https://docs.mongodb.com/manual/reference/bson-types/
+
+# Data Modelling - https://docs.mongodb.com/manual/core/data-modeling-introduction/
+
+# Model Relationship - https://docs.mongodb.com/manual/applications/data-models-relationships/
+
+
+               
+
+ 

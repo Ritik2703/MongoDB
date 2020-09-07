@@ -6,7 +6,7 @@
 
 # Working with MongoDB
 
-  ## Application                                                       Data
+   Application                                                       Data
   
    frontend         Backend | Drivers          <------->       Mongodb  <-->   storage  <---> db
      (UI)           (server)|  Node.js                         server          engine    r/w files(slow)
@@ -14,6 +14,6 @@
                                 Python                          communicate        file/data access
                                 
                                                   
-                           ##   Mongodb Shell   (queries to mongodb server)
+                               Mongodb Shell   (queries to mongodb server)
                                 
                                 playground, Administration

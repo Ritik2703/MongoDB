@@ -1,0 +1,11 @@
+
+# show dbs;
+
+# use shop;
+
+# db.products.insertOne ({name: "Bhagvad Geeta", price: 27.50})
+# db.products.find()
+# db.products().find.pretty()
+# db.products.insertOne ({name: "Canto 1", price: 12.50,description: 'Srimad Bhagvadam'})
+# db.products.insertOne ({name: "Canto 2", price: 15.50,description: 'Srimad Bhagvadam', writer: {first: "vedvyas", second:"prabhupada"}})
+# db.products().find.pretty()

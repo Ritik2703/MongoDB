@@ -1,0 +1,49 @@
+The use Command
+MongoDB use DATABASE_NAME is used to create database. The command will create a new database if it doesn't exist, otherwise it will return the existing database.
+
+Syntax
+Basic syntax of use DATABASE statement is as follows −
+
+use DATABASE_NAME
+Example
+If you want to use a database with name <mydb>, then use DATABASE statement would be as follows −
+
+>use mydb
+switched to db mydb
+To check your currently selected database, use the command db
+
+>db
+mydb
+If you want to check your databases list, use the command show dbs.
+
+>show dbs
+local     0.78125GB
+test      0.23012GB
+Your created database (mydb) is not present in list. To display database, you need to insert at least one document into it.
+
+>db.movie.insert({"name":"tutorials point"})
+>show dbs
+local      0.78125GB
+mydb       0.23012GB
+test       0.23012GB
+In MongoDB default database is test. If you didn't create any database, then collections will be stored in test database.
+
+
+The insertOne() operation creates both the database myNewDB and the collection myNewCollection1 if they do not already exist. Be sure that both the database and collection names follow MongoDB Naming Restrictions.
+
+Collections
+MongoDB stores documents in collections. Collections are analogous to tables in relational databases.
+
+A collection of MongoDB documents.
+click to enlarge
+Create a Collection
+If a collection does not exist, MongoDB creates the collection when you first store data for that collection.
+
+db.myNewCollection2.insertOne( { x: 1 } )
+db.myNewCollection3.createIndex( { y: 1 } )
+Both the insertOne() and the createIndex() operations create their respective collection if they do not already exist. Be sure that the collection name follows MongoDB Naming Restrictions.
+
+Explicit Creation
+MongoDB provides the db.createCollection() method to explicitly create a collection with various options, such as setting the maximum size or the documentation validation rules. If you are not specifying these options, you do not need to explicitly create the collection since MongoDB creates new collections when you first store data for the collections.
+
+To modify these collection options, see collMod.
